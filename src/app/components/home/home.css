@@ -39,6 +39,71 @@
   }
 }
 
+.purpose-shell {
+  margin-top: 1.5rem;
+}
+
+.purpose-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1.5rem 1.1rem 1.5rem !important;
+  border-radius: 1.25rem;
+  background: linear-gradient(155deg, #ffffff 0%, #f9fcff 100%);
+  border: 1px solid rgba(0, 91, 153, 0.12);
+  box-shadow: 0 12px 34px rgba(0, 91, 153, 0.14), 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.purpose-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 8px;
+  background: linear-gradient(90deg, #FF9933 0%, #FFCD00 45%, #138808 100%);
+}
+
+.purpose-card::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -70px;
+  top: -70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 91, 153, 0.1) 0%, rgba(0, 91, 153, 0) 70%);
+  pointer-events: none;
+}
+
+.purpose-title-wrap {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0.55rem;
+}
+
+.purpose-kicker {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #005B99;
+  font-weight: 700;
+}
+
+.purpose-title {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-weight: 700;
+}
+
+.purpose-intro {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.4rem;
+  margin-bottom: 1.3rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
 .objectives-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -57,16 +122,22 @@
   }
 }
 .objective-card {
-  border-radius: 1.2rem;
-  box-shadow: 0 2px 12px rgba(0,91,153,0.10);
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.2rem;  
   padding: 1.5rem 1.2rem 1.2rem 1.2rem;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 160px;
+  min-height: 120px;
   font-size: 1rem;
   font-weight: 400;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.objective-card:hover {
+  transform: none; 
 }
 
 .objective-desc {
@@ -82,26 +153,10 @@
 .indian-green,
 .swedish-yellow,
 .indian-white {
-  border-left: 6px solid;
-  border-top: 6px solid;
+  border-bottom: 3px solid;  
 }
 
-.indian-orange {
-  color: #fff;
-  border-color: #FF9933;
-}
-.swedish-blue {
-  color: #fff;
-  border-color: #005B99;
-}
-.indian-green {
-  color: #fff;
-  border-color: #138808;
-}
-.swedish-yellow {
-  color: #1e2b2f;
-  border-color: #FFCD00;
-}
+
 .indian-white {
   color: #1e2b2f;
   border-color: #ddd;
@@ -126,4 +181,19 @@
 .swedish-yellow-btn:hover {
   background: #ffe066;
   color: #003366;
+}
+
+@media (max-width: 600px) {
+  .purpose-card {
+    padding: 1.2rem 0.9rem 0.6rem 0.9rem !important;
+    border-radius: 1rem;
+  }
+
+  .purpose-kicker {
+    font-size: 0.68rem;
+  }
+
+  .purpose-intro {
+    font-size: 0.94rem;
+  }
 }
