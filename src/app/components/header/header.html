@@ -1,0 +1,32 @@
+<header>
+  <div class="header-row1">
+    <div class="logo-area">
+      <img src="assets/images/logos/sia-logo-v1.png" 
+           alt="Sandviken Indian Association Logo" 
+           class="logo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <div class="logo-fallback" style="display: none;">
+        <div class="logo-placeholder">SIA</div>
+      </div>
+      <div class="logo-text">
+        <h1>Sandviken Indian Association <span class="logo-acronym">(SIA)</span></h1>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="header-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      </div>
+      <div class="lang-selector">
+        <span class="lang-icon" [class.active-lang]="currentLang === 'en'" (click)="switchLanguage('en')">
+          <img src="assets/images/flags/india.svg" alt="Indian Flag" class="lang-flag">
+        </span>
+        <span class="lang-icon" [class.active-lang]="currentLang === 'sv'" (click)="switchLanguage('sv')">
+          <img src="assets/images/flags/sweden.svg" alt="Swedish Flag" class="lang-flag">          
+        </span>
+      </div>
+    </div>
+  </div>
+</header>

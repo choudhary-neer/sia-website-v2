@@ -1,0 +1,131 @@
+/* Board component specific styles */
+
+/* Add spacing between sections */
+.section-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Board Members Grid */
+.board-members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+/* Board Member Card */
+.board-member-card {
+  background: var(--sia-card-background);
+  border-radius: var(--sia-border-radius-lg);
+  box-shadow: var(--sia-shadow-medium);
+  border-top: 4px solid var(--sia-sweden-blue);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: var(--sia-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.board-member-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sia-sweden-blue) 0%, var(--sia-accent-blue) 100%);
+}
+
+.board-member-card:hover {
+  box-shadow: var(--sia-shadow-dark);
+}
+
+/* Avatar Placeholder with Icon */
+.avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 91, 153, 0.15) 0%, rgba(0, 91, 153, 0.25) 100%);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 91, 153, 0.2);
+  border: 4px solid white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* To replace with real image later, uncomment and add image:
+.avatar-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+*/
+
+.avatar-icon {
+  color: var(--sia-sweden-blue);
+  font-size: 4rem;
+  opacity: 0.7;
+}
+
+/* Member Info */
+.member-info {
+  text-align: center;
+  width: 100%;
+}
+
+.member-name {
+  color: var(--sia-sweden-blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.member-role {
+  color: var(--sia-text);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(0, 91, 153, 0.1);
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.member-place {
+  color: var(--sia-text-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .board-members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .board-member-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .avatar-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .avatar-initials {
+    font-size: 2rem;
+  }
+}

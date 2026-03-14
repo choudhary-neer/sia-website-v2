@@ -1,0 +1,164 @@
+/* Contact component specific styles */
+
+.section-container {
+  margin: 1.5rem 0;
+}
+
+.content-card {
+  margin: 1.5rem 0;
+}
+
+.office-hours-simple {
+  margin: 1.5rem 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Remove flickering hover effects */
+.content-card:hover {
+  transform: none !important;
+}
+
+/* Contact Information Grid */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem;
+  border: 1px solid rgba(0, 91, 153, 0.12);
+  border-radius: var(--sia-border-radius-sm);
+  background: transparent;
+}
+
+.contact-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-details h4 {
+  color: var(--sia-sweden-blue);
+  font-size: 1rem;
+  margin: 0 0 0.15rem;
+  font-weight: 600;
+}
+
+.contact-details p {
+  color: var(--sia-sweden-blue);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.contact-details a {
+  color: var(--sia-sweden-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.contact-details a:hover {
+  color: var(--sia-accent-blue);
+  text-decoration: underline;
+}
+
+/* Social Media Grid */
+.social-media-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.social-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: var(--sia-border-radius-pill);
+  border: 1px solid rgba(0, 91, 153, 0.2);
+  background: rgba(0, 91, 153, 0.03);
+  text-decoration: none;
+  color: var(--sia-sweden-blue);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.social-row:hover {
+  background: rgba(0, 91, 153, 0.08);
+  border-color: rgba(0, 91, 153, 0.35);
+}
+
+.social-icon {
+  font-size: 1rem;
+  width: 1.15rem;
+  text-align: center;
+}
+
+.social-icon i {
+  display: block;
+}
+
+.social-text {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.social-text h4 {
+  color: var(--sia-sweden-blue);
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.social-text p {
+  color: var(--sia-sweden-blue);
+  font-size: 0.86rem;
+  margin: 0;
+}
+
+.social-text p::before {
+  content: "-";
+  margin-right: 0.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-item {
+    padding: 0.85rem;
+  }
+
+  .social-row {
+    align-items: flex-start;
+    border-radius: var(--sia-border-radius-md);
+  }
+
+  .social-text {
+    white-space: normal;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .social-text p::before {
+    content: "";
+    margin-right: 0;
+  }
+}

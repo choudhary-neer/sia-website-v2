@@ -1,0 +1,107 @@
+/* About component specific styles */
+
+/* Add spacing between sections */
+.section-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-card {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Remove flickering hover effects */
+.content-card:hover {
+  transform: none !important;
+  cursor: none !important;
+}
+
+.features-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 0.75rem;
+}
+
+.feature-card {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  padding: 0.6rem 1rem;
+  border-radius: 0;
+  border-right: 1px solid rgba(0, 91, 153, 0.15);
+}
+
+.features-row .feature-card:last-child {
+  border-right: none;
+}
+
+.feature-card .sia-card-title {
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+.feature-card .sia-card-description {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.feature-card:hover {
+  transform: none !important;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .features-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .features-row .feature-card:nth-child(2) {
+    border-right: none;
+  }
+
+  .features-row .feature-card:nth-child(n+3) {
+    border-top: 1px solid rgba(0, 91, 153, 0.15);
+    border-right: 1px solid rgba(0, 91, 153, 0.15);
+  }
+
+  .features-row .feature-card:last-child {
+    border-right: none;
+  }
+}
+
+/* Indian-flag-colored section cards */
+.about-card {
+  border-radius: var(--sia-border-radius-md);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  border-top: 4px solid;
+}
+
+.mission-card {  
+  border-color: #FF9933;
+}
+
+.values-card {
+  border-color: #efefef;
+}
+
+.whatwedo-card {
+  border-color: #138808;
+}
+
+
+.about-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: var(--sia-sweden-blue);
+}
+
+.about-card-text {
+  color: var(--sia-sweden-blue);
+  line-height: 1.6;
+  margin: 0;
+}

@@ -1,0 +1,94 @@
+/* Toolbar component-specific styles only */
+.toolbar {
+  background: var(--sia-primary);
+  color: white;
+  padding: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-top: 3px solid #FFC72C;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem 0.3rem;
+  border-radius: 0;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--sia-transition);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: none;
+  position: relative;
+  margin-top: 4px;
+  outline: none;
+}
+
+.nav-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  transform: none;
+  margin-top: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+  margin-top: 0;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    justify-content: space-around;
+  }
+  
+  .nav-link {
+    padding: 0.4rem 0.3rem 0.25rem;
+    font-size: 0.85rem;
+    border-radius: 0;
+  }
+  
+  .toolbar {
+    padding: 0 0.5rem;
+  }
+}

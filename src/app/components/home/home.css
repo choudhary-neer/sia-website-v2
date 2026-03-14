@@ -1,0 +1,129 @@
+.home-hero-card {
+  background: #005B99;
+  color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,91,153,0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 1.5rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+.home-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #FFCD00;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,91,153,0.10);
+}
+.home-subtitle {
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 0;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+@media (max-width: 600px) {
+  .home-hero-card {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    border-radius: 1rem;
+  }
+  .home-title {
+    font-size: 1.3rem;
+  }
+  .home-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 900px) {
+  .objectives-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .objectives-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.objective-card {
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0,91,153,0.10);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 160px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.objective-desc {
+  font-size: 0.98rem;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  color: #005B99;
+}
+
+.indian-orange,
+.swedish-blue,
+.indian-green,
+.swedish-yellow,
+.indian-white {
+  border-left: 6px solid;
+  border-top: 6px solid;
+}
+
+.indian-orange {
+  color: #fff;
+  border-color: #FF9933;
+}
+.swedish-blue {
+  color: #fff;
+  border-color: #005B99;
+}
+.indian-green {
+  color: #fff;
+  border-color: #138808;
+}
+.swedish-yellow {
+  color: #1e2b2f;
+  border-color: #FFCD00;
+}
+.indian-white {
+  color: #1e2b2f;
+  border-color: #ddd;
+}
+
+.swedish-yellow-btn {
+  display: inline-block;
+  background: #FFCD00;
+  color: #005B99;
+  font-weight: 400;
+  padding: 0.5rem 1.3rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0,91,153,0.10);
+  margin-top: 1.2rem;
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  transition: background 0.2s, color 0.2s;
+}
+.swedish-yellow-btn:hover {
+  background: #ffe066;
+  color: #003366;
+}

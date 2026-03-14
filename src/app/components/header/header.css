@@ -1,0 +1,155 @@
+header {
+  color: #fff;
+  min-height: 95px;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--sia-shadow-button);
+  background: linear-gradient(135deg, var(--sia-primary) 0%, var(--sia-secondary) 100%);
+}
+
+.header-row1,
+.logo-area,
+.header-right,
+.header-social,
+.lang-selector,
+.lang-icon {
+  display: flex;
+  align-items: center;
+}
+
+.header-row1 {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 16px;
+}
+
+.logo-area {
+  flex: 1;
+  min-width: 0;
+  gap: 12px;
+}
+
+.logo,
+.logo-fallback,
+.logo-placeholder {
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+}
+
+.logo {
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.logo-placeholder {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.logo-text {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.logo-text h1,
+.logo-acronym,
+.header-social a {
+  color: #fff;
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logo-acronym {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.header-right {
+  gap: 12px;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.header-social {
+  gap: 12px;
+}
+
+.header-social a {
+  font-size: 1.3rem;
+  transition: var(--sia-transition-fast);
+}
+
+.header-social a:hover,
+.lang-icon.active-lang {
+  transform: scale(1.05);
+}
+
+.lang-selector {
+  gap: 8px;
+  padding-left: 5px;
+}
+
+.lang-icon {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: var(--sia-transition-fast);
+}
+
+.lang-icon.active-lang {
+  opacity: 1;
+}
+
+.lang-flag {
+  width: 22px;
+  height: 18px;
+  border-radius: 1px;
+}
+
+@media (max-width: 800px) {
+  header {
+    min-height: 80px;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .header-row1 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .logo,
+  .logo-fallback,
+  .logo-placeholder {
+    width: 65px;
+    height: 65px;
+  }
+
+  .logo-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .logo-acronym {
+    font-size: 0.95rem;
+  }
+}

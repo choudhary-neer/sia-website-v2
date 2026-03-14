@@ -1,0 +1,108 @@
+/* Events component specific styles */
+
+/* Add spacing between sections */
+.section-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Event Card */
+.event-card {
+  background: var(--sia-card-background);
+  border-radius: var(--sia-border-radius-lg);
+  box-shadow: var(--sia-shadow-medium);
+  border-top: 4px solid var(--sia-sweden-blue);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Event Date Section */
+.event-date {
+  background: var(--sia-sweden-blue);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  min-width: 100px;
+}
+
+.date-day {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.date-month {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.date-year {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Event Content */
+.event-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-title {
+  color: var(--sia-sweden-blue);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.event-location,
+.event-time {
+  color: var(--sia-text);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.event-description {
+  color: var(--sia-text-light);
+  line-height: 1.6;
+  margin: 1rem 0;
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .event-card {
+    flex-direction: column;
+  }
+  
+  .event-date {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .date-day {
+    font-size: 2rem;
+  }
+}
