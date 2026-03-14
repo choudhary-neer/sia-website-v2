@@ -386,9 +386,9 @@ router-outlet {
 
 /* Common Layout Classes */
 .page-container {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0;
+  max-width: none;
+  margin: 0;
 }
 
 .content-container {
