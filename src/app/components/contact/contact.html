@@ -16,27 +16,27 @@
     <!-- Contact Information -->
     <div> 
       <div class="contact-info-grid">
-        <div class="contact-item">
+        <div class="contact-item" *ngIf="contact">
           <div class="contact-icon">📧</div>
           <div class="contact-details">
             <h4>Email</h4>
-            <p><a href="mailto:info@sandvikenindian.se">info@sandvikenindian.se</a></p>
+            <p><a [href]="'mailto:' + contact.email">{{ contact.email }}</a></p>
           </div>
         </div>
         
-        <div class="contact-item">
+        <div class="contact-item" *ngIf="contact">
           <div class="contact-icon">📍</div>
           <div class="contact-details">
             <h4>Address</h4>
-            <p>Sandviken, Sweden</p>
+            <p>{{ contact.address.line1 }}<span *ngIf="contact.address.line2">, {{ contact.address.line2 }}</span></p>
           </div>
         </div>
         
-        <div class="contact-item">
+        <div class="contact-item" *ngIf="contact">
           <div class="contact-icon">🌐</div>
           <div class="contact-details">
             <h4>Website</h4>
-            <p><a href="https://www.sandvikenindian.se" target="_blank">www.sandvikenindian.se</a></p>
+            <p><a [href]="contact.website" target="_blank">{{ contact.website }}</a></p>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
         Stay updated with our latest events, news, and community activities by following us on social media.
       </p>
       <div class="social-media-grid">
-        <a href="https://www.facebook.com/sandvikenindian" target="_blank" rel="noopener noreferrer" class="social-row">
+        <a *ngIf="contact?.social?.facebook" [href]="contact.social.facebook" target="_blank" rel="noopener noreferrer" class="social-row">
           <div class="social-icon"><i class="fab fa-facebook-f" aria-hidden="true"></i></div>
           <div class="social-text">
             <h4>Facebook</h4>
@@ -59,7 +59,7 @@
           </div>
         </a>
 
-        <a href="https://www.instagram.com/sandvikenindian" target="_blank" rel="noopener noreferrer" class="social-row">
+        <a *ngIf="contact?.social?.instagram" [href]="contact.social.instagram" target="_blank" rel="noopener noreferrer" class="social-row">
           <div class="social-icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
           <div class="social-text">
             <h4>Instagram</h4>
@@ -67,7 +67,7 @@
           </div>
         </a>
 
-        <a href="https://twitter.com/sandvikenindian" target="_blank" rel="noopener noreferrer" class="social-row">
+        <a *ngIf="contact?.social?.twitter" [href]="contact.social.twitter" target="_blank" rel="noopener noreferrer" class="social-row">
           <div class="social-icon"><i class="fab fa-x-twitter" aria-hidden="true"></i></div>
           <div class="social-text">
             <h4>Twitter</h4>
