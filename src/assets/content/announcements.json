@@ -1,0 +1,33 @@
+{
+  "announcements": [
+    {
+      "badge": "Important",
+      "date": "March 10, 2026",
+      "title": "Annual General Meeting - 2026",
+      "description": [
+        "We are pleased to invite all members to our Annual General Meeting scheduled for April 15, 2026. This is an important event where we will review the past year's activities, discuss financial reports, and elect new board members.",
+        "Date: April 15, 2026\nTime: 5:00 PM - 8:00 PM\nLocation: Sandviken Community Center",
+        "All members are encouraged to attend and participate in shaping the future of our community. Registration is required by April 10, 2026."
+      ]
+    },
+    {
+      "badge": "Info",
+      "date": "February 28, 2026",
+      "title": "Membership Fee Structure Update",
+      "description": [
+        "The Board of Directors has approved the membership fee structure for 2026. The new rates will be effective from April 1, 2026.",
+        "Regular membership fees remain affordable to ensure inclusivity, with special reduced rates available for students and pensioners. Detailed information about the fee structure will be shared at the Annual General Meeting.",
+        "For any questions regarding membership fees, please contact our treasurer at info@sandvikenindian.se."
+      ]
+    },
+    {
+      "badge": "Opportunity",
+      "date": "February 15, 2026",
+      "title": "Volunteers Needed for Upcoming Events",
+      "description": [
+        "We are looking for enthusiastic volunteers to help organize and manage our upcoming cultural events and festivals. This is a great opportunity to get more involved with the community and contribute to making our events successful.",
+        "Areas where we need help:"
+      ]      
+    }
+  ]
+}

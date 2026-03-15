@@ -1,0 +1,49 @@
+{
+  "events": [
+    {
+      "title": "Diwali Celebration",
+      "day": 15,
+      "month": "Nov",
+      "year": 2024,
+      "location": "Sandviken Community Center",
+      "time": "6:00 PM - 10:00 PM",
+      "description": "Celebrate the Festival of Lights with traditional performances, delicious food, and cultural activities. Join us for an evening of joy, music, and community bonding."
+    },
+    {
+      "title": "Holi Color Festival",
+      "day": 25,
+      "month": "Mar",
+      "year": 2025,
+      "location": "Sandviken Park",
+      "time": "2:00 PM - 6:00 PM",
+      "description": "Experience the vibrant colors of Holi! Join us for music, dance, traditional sweets, and color play. A fun-filled celebration for all ages."
+    },
+    {
+      "title": "Indian Independence Day",
+      "day": 15,
+      "month": "Aug",
+      "year": 2025,
+      "location": "Sandviken Community Hall",
+      "time": "5:00 PM - 9:00 PM",
+      "description": "Commemorate India's Independence Day with flag hoisting, cultural performances, patriotic songs, and traditional cuisine. Celebrate the spirit of freedom together."
+    },
+    {
+      "title": "Yoga Workshop",
+      "day": 10,
+      "month": "Sep",
+      "year": 2025,
+      "location": "SIC Activity Center",
+      "time": "4:00 PM - 7:00 PM",
+      "description": "Join us for a rejuvenating yoga session led by experienced instructors. Suitable for all levels, this workshop will help you improve flexibility, strength, and mindfulness."
+    },
+    {
+      "title": "Indian Cooking Class",
+      "day": 20,
+      "month": "Oct",
+      "year": 2025,
+      "location": "Community Kitchen, Sandviken",
+      "time": "3:00 PM - 6:00 PM",
+      "description": "Discover the secrets of Indian cuisine! Learn to prepare traditional dishes with hands-on guidance. Enjoy the meal you create together with fellow participants."
+    }
+  ]
+}
