@@ -145,7 +145,7 @@
         passion for Indian culture and heritage.
       </p>
       <div class="cta-buttons">
-        <a href="mailto:info@sandvikenindian.se?subject=Membership Application" class="action-btn">
+        <a [href]="'mailto:' + contact.email + '?subject=Membership Application'" class="action-btn">
           Apply for Membership
         </a>
         <a routerLink="/contact" class="action-btn secondary">

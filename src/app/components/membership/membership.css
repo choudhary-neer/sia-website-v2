@@ -127,5 +127,13 @@
   .action-btn {
     width: 100%;
     justify-content: center;
-  }
+  } 
 }
+
+ .action-btn:hover,
+  .cta-btn:hover {
+    background: var(--sia-accent-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--sia-shadow-dark);
+    color: white  !important;
+  }
