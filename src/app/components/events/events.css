@@ -34,23 +34,11 @@
   min-width: 100px;
 }
 
-.date-day {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 0.25rem;
-}
-
-.date-month {
+.date-formatter {
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
-}
-
-.date-year {
-  font-size: 0.9rem;
-  opacity: 0.9;
 }
 
 /* Event Content */
