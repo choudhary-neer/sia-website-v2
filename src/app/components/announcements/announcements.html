@@ -18,82 +18,14 @@
     <!-- Announcements List -->
     <div class="announcements-list">
       
-      <!-- Announcement 1: Annual General Meeting -->
-      <div class="announcement-card">
+      <div class="announcement-card" *ngFor="let announcement of announcements">
         <div class="announcement-header">
-          <span class="announcement-badge">Important</span>
-          <span class="announcement-date">March 10, 2026</span>
+          <span class="announcement-badge">{{ announcement.badge }}</span>
+          <span class="announcement-date">{{ announcement.date }}</span>
         </div>
-        <h3 class="announcement-title">Annual General Meeting - 2026</h3>
+        <h3 class="announcement-title">{{ announcement.title }}</h3>
         <div class="announcement-content">
-          <p>
-            We are pleased to invite all members to our Annual General Meeting scheduled for April 15, 2026. 
-            This is an important event where we will review the past year's activities, discuss financial reports, 
-            and elect new board members.
-          </p>
-          <p>
-            <strong>Date:</strong> April 15, 2026<br>
-            <strong>Time:</strong> 5:00 PM - 8:00 PM<br>
-            <strong>Location:</strong> Sandviken Community Center
-          </p>
-          <p>
-            All members are encouraged to attend and participate in shaping the future of our community. 
-            Registration is required by April 10, 2026.
-          </p>
-        </div>
-      </div>
-
-      <!-- Announcement 2: Membership Fee Update -->
-      <div class="announcement-card">
-        <div class="announcement-header">
-          <span class="announcement-badge">Info</span>
-          <span class="announcement-date">February 28, 2026</span>
-        </div>
-        <h3 class="announcement-title">Membership Fee Structure Update</h3>
-        <div class="announcement-content">
-          <p>
-            The Board of Directors has approved the membership fee structure for 2026. The new rates will be 
-            effective from April 1, 2026.
-          </p>
-          <p>
-            Regular membership fees remain affordable to ensure inclusivity, with special reduced rates available 
-            for students and pensioners. Detailed information about the fee structure will be shared at the 
-            Annual General Meeting.
-          </p>
-          <p>
-            For any questions regarding membership fees, please contact our treasurer at 
-            <a href="mailto:info@sandvikenindian.se">info@sandvikenindian.se</a>.
-          </p>
-        </div>
-      </div>
-
-      <!-- Announcement 3: Volunteer Opportunity -->
-      <div class="announcement-card">
-        <div class="announcement-header">
-          <span class="announcement-badge">Opportunity</span>
-          <span class="announcement-date">February 15, 2026</span>
-        </div>
-        <h3 class="announcement-title">Volunteers Needed for Upcoming Events</h3>
-        <div class="announcement-content">
-          <p>
-            We are looking for enthusiastic volunteers to help organize and manage our upcoming cultural events 
-            and festivals. This is a great opportunity to get more involved with the community and contribute 
-            to making our events successful.
-          </p>
-          <p>
-            <strong>Areas where we need help:</strong>
-          </p>
-          <ul>
-            <li>Event planning and coordination</li>
-            <li>Registration and welcoming guests</li>
-            <li>Food preparation and serving</li>
-            <li>Photography and social media</li>
-            <li>Setup and cleanup</li>
-          </ul>
-          <p>
-            If you're interested in volunteering, please reach out to us at 
-            <a href="mailto:info@sandvikenindian.se">info@sandvikenindian.se</a>. No prior experience required!
-          </p>
+          <p *ngFor="let para of announcement.description">{{ para }}</p>
         </div>
       </div>
 
