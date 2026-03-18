@@ -34,8 +34,8 @@ header {
 .logo,
 .logo-fallback,
 .logo-placeholder {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   flex-shrink: 0;
 }
 
