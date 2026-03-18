@@ -86,7 +86,7 @@ export class LanguageService {
         membership: 'Medlemskap',
         photoGallery: 'Fotogalleri',
         contact: 'Kontakt',
-        board: 'Board of Directors',
+        board: 'Styrelse',
         announcements: 'Meddelanden',
         events: 'Evenemang'
       },
