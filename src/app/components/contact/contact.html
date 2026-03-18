@@ -51,7 +51,7 @@
         Stay updated with our latest events, news, and community activities by following us on social media.
       </p>
       <div class="social-media-grid">
-        <a *ngIf="contact?.social?.facebook" [href]="contact.social.facebook" target="_blank" rel="noopener noreferrer" class="social-row">
+        <a *ngIf="contact && contact.social.facebook" [href]="contact.social.facebook" target="_blank" rel="noopener noreferrer" class="social-row">
           <div class="social-icon"><i class="fab fa-facebook-f" aria-hidden="true"></i></div>
           <div class="social-text">
             <h4>Facebook</h4>
@@ -59,7 +59,7 @@
           </div>
         </a>
 
-        <a *ngIf="contact?.social?.instagram" [href]="contact.social.instagram" target="_blank" rel="noopener noreferrer" class="social-row">
+        <a *ngIf="contact && contact.social.instagram" [href]="contact.social.instagram" target="_blank" rel="noopener noreferrer" class="social-row">
           <div class="social-icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
           <div class="social-text">
             <h4>Instagram</h4>
@@ -67,7 +67,7 @@
           </div>
         </a>
 
-        <a *ngIf="contact?.social?.twitter" [href]="contact.social.twitter" target="_blank" rel="noopener noreferrer" class="social-row">
+        <a *ngIf="contact && contact.social.twitter" [href]="contact.social.twitter" target="_blank" rel="noopener noreferrer" class="social-row">
           <div class="social-icon"><i class="fab fa-x-twitter" aria-hidden="true"></i></div>
           <div class="social-text">
             <h4>Twitter</h4>
