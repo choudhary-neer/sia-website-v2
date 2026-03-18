@@ -1,0 +1,16 @@
+{
+  "email": "sia.sandviken@gmail.com",
+
+  "address": {
+    "line1": "Sandviken",
+    "line2": "Sweden"
+  },
+
+  "website": "https://www.sandvikenindian.se",
+
+  "social": {
+    "facebook": "https://www.facebook.com/sandvikenindian",
+    "instagram": "https://www.instagram.com/sandvikenindian",
+    "twitter": "https://twitter.com/sandvikenindian"
+  }
+}
