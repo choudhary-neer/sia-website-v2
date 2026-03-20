@@ -57,7 +57,7 @@ header {
 
 .logo-text {
   min-width: 0;
-  white-space: nowrap;
+  white-space: normal !important;
 }
 
 .logo-text h1,
