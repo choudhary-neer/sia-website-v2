@@ -26,6 +26,44 @@
             Encourage community bonding through sports, social activities, and volunteering.
           </div>
         </div>          
+      </div>  
+    </div>
+    <!-- Home Carousel -->
+    <div class="home-carousel"
+         (mouseenter)="pauseAutoplay()"
+         (mouseleave)="resumeAutoplay()"
+         (touchstart)="pauseAutoplay()"
+         (touchend)="resumeAutoplay()">
+
+      <div class="home-carousel-track" [style.transform]="'translateX(-' + homeSlide * 100 + '%)'">
+        <div class="hc-slide" *ngFor="let slide of slides">
+          <!-- Skeleton shimmer while not yet loaded -->
+          <div class="hc-skeleton" *ngIf="!slide.loaded"></div>
+          <!-- Image src set only after page is ready (deferred) -->
+          <img
+            *ngIf="carouselReady && !slide.error"
+            [src]="slide.src"
+            [alt]="slide.alt"
+            title="Community photo"
+            loading="lazy"
+            [class.hc-img-visible]="slide.loaded"
+            (load)="onImageLoad(slide)"
+            (error)="onImageError(slide)"
+          />
+        </div>
+      </div>
+
+      <button class="hc-btn hc-prev" (click)="prev()" aria-label="Previous">&#10094;</button>
+      <button class="hc-btn hc-next" (click)="next()" aria-label="Next">&#10095;</button>
+
+      <div class="hc-dots">
+        <button
+          class="hc-dot"
+          *ngFor="let slide of slides; let i = index"
+          [class.active]="homeSlide === i"
+          (click)="goTo(i)"
+          [title]="'Image ' + (i + 1)"
+        >{{ i + 1 }}</button>
       </div>
     </div>
   </div>
