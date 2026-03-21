@@ -3,3 +3,143 @@
 .section-container {
   margin: 2rem 0;
 }
+
+.carousel {
+  position: relative;
+  width: min(100%, 960px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  background: #0f2136;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.carousel-btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.carousel-btn.prev {
+  left: 12px;
+}
+
+.carousel-btn.next {
+  right: 12px;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  overflow: hidden;
+}
+
+.dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    margin: 1.25rem 0;
+  }
+
+  .carousel {
+    border-radius: 12px;
+  }
+
+  .carousel-slide {
+    aspect-ratio: 4 / 3;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-btn.prev {
+    left: 8px;
+  }
+
+  .carousel-btn.next {
+    right: 8px;
+  }
+
+  .carousel-dots {
+    bottom: 10px;
+    gap: 6px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-dots {
+    bottom: 8px;
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+  }
+}

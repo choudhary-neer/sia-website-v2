@@ -7,10 +7,39 @@
 
   <div class="content-container">
     <div class="section-container">
-      <h2 class="section-title">Coming Soon</h2>
-      <p class="section-content">
-        We are preparing a photo gallery of our recent events and celebrations. Please check back soon.
-      </p>
+      <div
+        class="carousel"
+        (mouseenter)="pauseAutoplay()"
+        (mouseleave)="resumeAutoplay()"
+        (touchstart)="pauseAutoplay()"
+        (touchend)="resumeAutoplay()"
+      >
+        <div class="carousel-track" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+          <div class="carousel-slide" *ngFor="let image of images">
+            <img [src]="image.src" [alt]="image.alt" title="Gallery image" loading="lazy" />
+          </div>
+        </div>
+
+        <button type="button" class="carousel-btn prev" (click)="prevSlide()" aria-label="Previous image">
+          <span aria-hidden="true">&#10094;</span>
+        </button>
+
+        <button type="button" class="carousel-btn next" (click)="nextSlide()" aria-label="Next image">
+          <span aria-hidden="true">&#10095;</span>
+        </button>
+
+        <div class="carousel-dots" aria-label="Carousel navigation">
+          <button
+            type="button"
+            class="dot"
+            *ngFor="let image of images; let i = index"
+            [class.active]="i === currentIndex"
+            (click)="goToSlide(i)"
+            [title]="'Image ' + (i + 1)"
+            [attr.aria-label]="'Go to image ' + (i + 1)"
+          >{{ i + 1 }}</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
