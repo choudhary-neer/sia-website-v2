@@ -1,51 +1,59 @@
 <nav class="toolbar">
-  <ul class="nav-menu">
+  <!-- Hamburger Menu Toggle -->
+  <button class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Toggle navigation menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <!-- Navigation Menu -->
+  <ul class="nav-menu" [class.active]="menuOpen">
     <li class="nav-item">
-      <a routerLink="/home" class="nav-link" routerLinkActive="active">
+      <a routerLink="/home" class="nav-link" routerLinkActive="active" (click)="closeMenu()">
         <i class="fas fa-home"></i>
-        {{ content.toolbar.home }}
+        <span class="nav-text">{{ content.toolbar.home }}</span>
       </a>
     </li>
     <li class="nav-item">
-      <a routerLink="/about" class="nav-link" routerLinkActive="active">
+      <a routerLink="/about" class="nav-link" routerLinkActive="active" (click)="closeMenu()">
         <i class="fas fa-info-circle"></i>
-        {{ content.toolbar.about }}
+        <span class="nav-text">{{ content.toolbar.about }}</span>
       </a>
     </li>    
     <li class="nav-item">
-      <a routerLink="/board" class="nav-link" routerLinkActive="active">
+      <a routerLink="/board" class="nav-link" routerLinkActive="active" (click)="closeMenu()">
         <i class="fas fa-users-cog"></i>
-        {{ content.toolbar.board }}
+        <span class="nav-text">{{ content.toolbar.board }}</span>
       </a>
     </li> 
-     <li class="nav-item">
-      <a routerLink="/membership" class="nav-link" routerLinkActive="active">
+    <li class="nav-item">
+      <a routerLink="/membership" class="nav-link" routerLinkActive="active" (click)="closeMenu()">
         <i class="fas fa-id-card"></i>
-        {{ content.toolbar.membership }}
+        <span class="nav-text">{{ content.toolbar.membership }}</span>
       </a>
     </li>  
     <li class="nav-item">
-      <a routerLink="/announcements" class="nav-link" routerLinkActive="active">
+      <a routerLink="/announcements" class="nav-link" routerLinkActive="active" (click)="closeMenu()">
         <i class="fas fa-bullhorn"></i>
-        {{ content.toolbar.announcements }}
+        <span class="nav-text">{{ content.toolbar.announcements }}</span>
       </a>
     </li>
-     <li class="nav-item">
-      <a routerLink="/events" class="nav-link" routerLinkActive="active">
+    <li class="nav-item">
+      <a routerLink="/events" class="nav-link" routerLinkActive="active" (click)="closeMenu()">
         <i class="fas fa-calendar-alt"></i>
-        {{ content.toolbar.events }}
+        <span class="nav-text">{{ content.toolbar.events }}</span>
       </a>
     </li>
     <li class="nav-item">
-      <a routerLink="/photo-gallery" class="nav-link" routerLinkActive="active">
+      <a routerLink="/photo-gallery" class="nav-link" routerLinkActive="active" (click)="closeMenu()">
         <i class="fas fa-images"></i>
-        {{ content.toolbar.photoGallery }}
+        <span class="nav-text">{{ content.toolbar.photoGallery }}</span>
       </a>
     </li>
     <li class="nav-item">
-      <a routerLink="/contact" class="nav-link" routerLinkActive="active">
+      <a routerLink="/contact" class="nav-link" routerLinkActive="active" (click)="closeMenu()">
         <i class="fas fa-envelope"></i>
-        {{ content.toolbar.contact }}
+        <span class="nav-text">{{ content.toolbar.contact }}</span>
       </a>
     </li>
   </ul>

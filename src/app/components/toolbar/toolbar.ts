@@ -13,6 +13,7 @@ import { ContentModel } from '../../models/content';
 })
 export class ToolbarComponent implements OnInit {
   content!: ContentModel;
+  menuOpen = false;
 
   constructor(private languageService: LanguageService) {}
 
@@ -20,5 +21,13 @@ export class ToolbarComponent implements OnInit {
     this.languageService.currentLang$.subscribe(() => {
       this.content = this.languageService.getContent();
     });
+  }
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu(): void {
+    this.menuOpen = false;
   }
 }
